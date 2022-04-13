@@ -4,18 +4,28 @@ namespace Upanupstudios\Onesignal\Php\Client;
 
 final class Config
 {
-  private $apiToken;
+  private $appId;
+  private $apiKey;
 
-  public function __construct(string $apiToken)
+  public function __construct(string $appId, string $apiKey)
   {
-    $this->apiToken = $apiToken;
+    $this->appId = $appId;
+    $this->apiKey = $apiKey;
   }
 
   /**
    * Get API token.
    */
-  public function getApiToken(): string
+  public function getAppId(): string
   {
-    return $this->apiToken;
+    return $this->appId;
+  }
+
+  /**
+   * Get API token.
+   */
+  public function getApiKey(): string
+  {
+    return $this->apiKey;
   }
 }

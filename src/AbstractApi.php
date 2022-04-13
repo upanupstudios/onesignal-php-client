@@ -1,9 +1,6 @@
 <?php
 
-namespace Upanupstudios\Onesignal\Php\Client;
-
-use Psr\Http\Message\RequestInterface;
-use Psr\Http\Message\StreamInterface;
+namespace Upanupstudios\OneSignal\Php\Client;
 
 abstract class AbstractApi
 {

@@ -38,9 +38,8 @@ class Onesignal
     try {
       $defaultOptions = [
         'headers' => [
-          'Accept' => 'application/json',
           'Content-Type' => 'application/json',
-          'Authorization' => 'Bearer '.$this->config->getApiToken()
+          'Authorization' => 'Basic '.$this->config->getApiKey()
         ]
       ];
 
@@ -67,13 +66,6 @@ class Onesignal
     return $response;
   }
 
-  public function ping()
-  {
-    $response = $this->request('GET', 'ping');
-
-    return $response;
-  }
-
   /**
    * @return object
    *
@@ -83,12 +75,12 @@ class Onesignal
   public function api(string $class)
   {
     switch ($class) {
-      case 'groups':
-        $api = new Groups($this);
+      case 'apps':
+        $api = new Apps($this);
         break;
 
-      case 'mailings':
-        $api = new Mailings($this);
+      case 'notifications':
+        $api = new Notifications($this);
         break;
 
       default:

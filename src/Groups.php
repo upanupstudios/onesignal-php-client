@@ -1,6 +1,6 @@
 <?php
 
-namespace Upanupstudios\Onesignal\Php\Client;
+namespace Upanupstudios\OneSignal\Php\Client;
 
 class Groups extends AbstractApi
 {
