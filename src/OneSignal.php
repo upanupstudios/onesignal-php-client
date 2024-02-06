@@ -83,6 +83,10 @@ class Onesignal
         $api = new Notifications($this);
         break;
 
+      case 'devices':
+        $api = new Devices($this);
+        break;
+
       default:
         throw new \InvalidArgumentException("Undefined api instance called: '$class'.");
     }
