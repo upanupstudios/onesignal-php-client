@@ -2,15 +2,20 @@
 
 namespace Upanupstudios\OneSignal\Php\Client;
 
-class Apps extends AbstractApi
-{
+/**
+ * The Apps class.
+ */
+class Apps extends AbstractApi {
+
   /**
-   * View an app
+   * {@inheritdoc}
    */
-  public function view($id)
-  {
-    $response = $this->client->request('GET', 'apps/'.$id);
+  public function view($id) {
+    $url = $this->oneSignal->getApiUrl() . '/apps/' . $id;
+
+    $response = $this->oneSignal->request('GET', $url);
 
     return $response;
   }
+
 }

@@ -2,30 +2,45 @@
 
 namespace Upanupstudios\Onesignal\Php\Client;
 
-final class Config
-{
+/**
+ * The Config class.
+ */
+final class Config {
+
+  /**
+   * The App ID.
+   *
+   * @var string
+   */
   private $appId;
+
+  /**
+   * The API Key.
+   *
+   * @var string
+   */
   private $apiKey;
 
-  public function __construct(string $appId, string $apiKey)
-  {
+  /**
+   * {@inheritdoc}
+   */
+  public function __construct(string $appId, string $apiKey) {
     $this->appId = $appId;
     $this->apiKey = $apiKey;
   }
 
   /**
-   * Get API token.
+   * Get App ID.
    */
-  public function getAppId(): string
-  {
+  public function getAppId(): string {
     return $this->appId;
   }
 
   /**
-   * Get API token.
+   * Get API Key.
    */
-  public function getApiKey(): string
-  {
+  public function getApiKey(): string {
     return $this->apiKey;
   }
+
 }

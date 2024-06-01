@@ -2,17 +2,22 @@
 
 namespace Upanupstudios\OneSignal\Php\Client;
 
-class Notifications extends AbstractApi
-{
+/**
+ * The Contacts class.
+ */
+class Notifications extends AbstractApi {
+
   /**
-   * Create a new notifications to be sent.
+   * {@inheritdoc}
    */
-  public function create(array $data)
-  {
+  public function create(array $data) {
     $options['body'] = json_encode($data);
 
-    $response = $this->client->request('POST', 'notifications', $options);
+    $url = $this->oneSignal->getApiUrl() . '/notifications';
+
+    $response = $this->oneSignal->request('POST', $url, $options);
 
     return $response;
   }
+
 }

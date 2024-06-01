@@ -2,15 +2,23 @@
 
 namespace Upanupstudios\OneSignal\Php\Client;
 
-abstract class AbstractApi
-{
+/**
+ * The AbstractApi class.
+ */
+abstract class AbstractApi {
+
   /**
+   * The OneSignal object.
+   *
    * @var Onesignal
    */
-  protected $client;
+  protected $oneSignal;
 
-  public function __construct(Onesignal $client)
-  {
-      $this->client = $client;
+  /**
+   * {@inheritdoc}
+   */
+  public function __construct(Onesignal $oneSignal) {
+    $this->oneSignal = $oneSignal;
   }
+
 }
