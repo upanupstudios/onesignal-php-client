@@ -101,6 +101,7 @@ class OneSignal {
         $api = new Apps($this);
         break;
 
+      // @deprecated - use users or subscriptions instead.
       case 'devices':
         $api = new Devices($this);
         break;
@@ -111,6 +112,10 @@ class OneSignal {
 
       case 'segments':
         $api = new Segments($this);
+        break;
+
+      case 'users':
+        $api = new Users($this);
         break;
 
       default:

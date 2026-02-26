@@ -3,7 +3,7 @@
 namespace Upanupstudios\OneSignal\Php\Client;
 
 /**
- * The Contacts class.
+ * The Devices class.
  */
 class Devices extends AbstractApi {
 
